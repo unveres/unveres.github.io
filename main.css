@@ -1,0 +1,84 @@
+body {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 20px;
+  background-color: #EEEEEE;
+  color: #333333;
+}
+
+#toppanel {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+div, header, nav, footer, article, section {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+header, nav, footer {
+  line-height: 1em;
+  background-color: white;
+  color: black;
+  text-align: center;
+  text-transform: lowercase;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+header {
+  padding: 0.25em 0 0.25em 0;
+  font-size: 2em;
+}
+
+nav {
+  padding: 0.5em 0 0.75em 0;
+}
+
+nav > span + span::before {
+  display: inline-block;
+  color: hsl(45, 50%, 25%);
+  content: "\2022\00a0";
+}
+
+nav > span[selected] {
+  font-weight: bold;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.5em 0 0.5em 0;
+  font-size: 0.75em;
+}
+
+article {
+  position: relative;
+  top: 5.25em;
+  padding: calc(200vw / 21);
+  box-sizing: border-box;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:link, a:visited, a { color: hsl(45, 50%, 25%); }
+a:hover, a:active    { color: hsl(45, 50%, 40%); }
+
+p {
+  display: inline-block;
+}
