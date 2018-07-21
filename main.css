@@ -5,16 +5,9 @@ body {
   border: 0;
   outline: 0;
   width: 100vw;
-  min-height: 100vh;
   font-size: 20px;
   background-color: #EEEEEE;
   color: #333333;
-}
-
-#toppanel {
-  position: fixed;
-  left: 0;
-  top: 0;
 }
 
 div, header, nav, footer, article, section {
@@ -55,18 +48,14 @@ nav > span[selected] {
 }
 
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   padding: 0.5em 0 0.5em 0;
   font-size: 0.75em;
 }
 
 article {
-  position: relative;
-  top: 5.25em;
-  padding: calc(200vw / 21);
   box-sizing: border-box;
+  min-height: calc(100vh - 6.75em);
+  padding: 5vw;
   line-height: 1.5em;
   text-align: justify;
 }
