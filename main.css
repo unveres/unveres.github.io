@@ -1,10 +1,10 @@
+/* BASIC RULES */
+
 body {
   display: block;
   padding: 0;
   margin: 0;
   border: 0;
-  outline: 0;
-  width: 100vw;
   font-size: 20px;
   background-color: #EEEEEE;
   color: #333333;
@@ -16,8 +16,42 @@ div, header, nav, footer, article, section {
   clear: both;
 }
 
+/* SCROLLBAR WRAPPER */
+
+#main, #scrollbar-wrapper {
+  --scrollbar-width: 17px;
+}
+
+#main {
+  flex-basis: calc(100vw - var(--scrollbar-width, 0));
+}
+
+#scrollbar-wrapper {
+  position: relative;
+  left: 0;
+  top: 0;
+  flex-basis: var(--scrollbar-width, 0);
+}
+
+/*#scrollbar-wrapper > div {
+  position: absolute;
+  left: 0;
+  background-color: white;
+}
+
+#scrollbar-wrapper > div:nth-child(1) {
+  top: 0;
+  height: 5.25em;
+}
+
+#scrollbar-wrapper > div:nth-child(2) {
+  bottom: 0;
+  height: 1.5em;
+}*/
+
+/* NON-CONTENT STYLING */
+
 header, nav, footer {
-  line-height: 1em;
   background-color: white;
   color: black;
   text-align: center;
@@ -52,6 +86,8 @@ footer {
   font-size: 0.75em;
 }
 
+/* CONTENT STYLING */
+
 article {
   box-sizing: border-box;
   min-height: calc(100vh - 6.75em);
@@ -69,5 +105,32 @@ a:link, a:visited, a { color: hsl(45, 50%, 25%); }
 a:hover, a:active    { color: hsl(45, 50%, 40%); }
 
 p {
-  display: inline-block;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-indent: 2em;
+  font-weight: bold;
+}
+
+p + p {
+  padding: 1em 0 0 0;
+  font-weight: normal;
+}
+
+q, code {
+  display: block;
+  text-indent: 0em;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+q {
+  color: #555555;
+  font-style: italic;
+  quotes: "\00AB\00a0" "\00a0\00BB"
+}
+
+code {
+  margin: 0.5em 1em 0.5em 1em;
+  background-color: #E6E6E6;
+  color: #555555;
 }
